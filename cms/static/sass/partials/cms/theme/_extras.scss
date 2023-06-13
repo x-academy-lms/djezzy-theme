@@ -1,0 +1,101 @@
+// Extra rules needed for a Studio theme
+//
+// The _extras.scss file is imported after all other rules by
+// the Studio Sass. For your own theme, you can override this file
+// to add any custom rules that you need. You can also import
+// partials directly into this file so that you can break your
+// rules into modular pieces.
+
+
+// CUSTOMAZATION 
+$primary: #D23228;
+$secondary: #00262B;
+
+.wrapper-header {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.wrapper-header {
+    .branding {
+        a {
+            img {
+                max-height: 50px;
+                display: block;
+            }
+        }
+    }
+}
+
+
+.view-container .content-supplementary .bit-publishing .wrapper-pub-actions .action-publish {
+    background-color: #D23228;
+    border-color: #D23228;
+}
+
+
+.view-howitworks.not-signedin .wrapper-content-header {
+    background-color: #ce3535f2;
+    background-image: none;
+    // opacity: 0.6;
+}
+
+
+.view-howitworks.not-signedin .content-header h1 {
+    border-color: #fff;
+}
+
+.view-howitworks.not-signedin .content-header .tagline {
+    color: #fff;
+}
+
+.view-howitworks.not-signedin .content-cta .list-actions {
+    position: relative;
+    margin-top: 0;
+}
+
+
+
+
+.view-howitworks.not-signedin .content-cta {
+    border-top: 0px solid #e5e5e5;
+}
+
+
+.view-howitworks.not-signedin .content-cta .list-actions .action.action-primary {
+    background-color: #fff;
+    color: #e71722;
+    background-image: none;
+    border: 1px solid #e71722;
+
+    &:hover {
+        background-color: #fff;
+        color: #e71722;
+    }
+}
+
+
+.not-signedin .wrapper-header .nav-pitch {
+    .action-signup {
+        background-color: #e71722;
+        color: #fff;
+        background-image: none;
+        border: 1px solid #e71722;
+
+        &:hover {
+            background-color: #e71722;
+            color: #fff;
+        }
+    }
+
+    .action-signin {
+        background-color: #fff;
+        color: #e71722;
+        background-image: none;
+        border: 1px solid #e71722;
+
+        &:hover {
+            background-color: #fff;
+            color: #e71722;
+        }
+    }
+}
