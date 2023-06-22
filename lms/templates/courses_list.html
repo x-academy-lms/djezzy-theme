@@ -1,0 +1,14 @@
+<%page expression_filter="h"/>
+<%namespace name='static' file='static_content.html'/>
+<%! from django.utils.translation import gettext as _ %>
+
+<section class="expore-courses-content">
+      
+    <div class="d-flex flex-row justify-content-center">
+          <a style="width:fit-content;" class="explore-courses " href="${marketing_link('COURSES')}"
+             aria-current="${'page' if '/courses' in request.path else 'false'}">
+             ${_('Discover New')}
+          </a>
+      </div>
+      
+</section>

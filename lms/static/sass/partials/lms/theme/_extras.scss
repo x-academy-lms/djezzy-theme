@@ -290,7 +290,7 @@ $header-logo-height: 60px !default;
 }
 
 .home>header>img {
-  width: 100%;
+  width: 100vw;
   text-align: center;
 }
 
@@ -463,8 +463,8 @@ main {
   border-radius: 6px;
   border-width: 0px;
   max-width: 70%;
-
 }
+
 
 
 
@@ -601,4 +601,39 @@ main {
   position: relative;
   right: -10rem;
   // border: 0px;
+}
+
+
+
+////////////// Explore courses after landsacpe
+
+a.explore-courses {
+  border: 3px solid theme-color("inverse");
+  font-weight: $font-weight-normal;
+  padding: 15px 70px 15px 70px;
+
+  background-color: theme-color("inverse");
+  color: theme-color("primary");
+  border-color: theme-color("primary");
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  &:hover{
+    background-color: theme-color("primary");
+    color: white !important;
+    text-decoration: none ;
+
+  }
+}
+
+section.expore-courses-content {
+  margin : 40px 0 40px 0;
+}
+//////////////
+/// Course header 
+.global-header .header-logo .course-header {
+  display: block;
+  width: 150px;
+  margin-top: 0px;
 }

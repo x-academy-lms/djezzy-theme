@@ -56,12 +56,13 @@
       color: theme-color("dark");
       line-height: 1em;
       display: none;
-
+      width: 150px !important;
       .course-name {
         display: block;
         font-size: $font-size-base;
         margin-top: 7px;
         font-weight: 600;
+        
       }
 
       // Hide the course header for smaller screen sizes
