@@ -149,7 +149,9 @@ from common.djangoapps.student.models import CourseEnrollment
     
     <div class="dashboard" id="dashboard-main">
       <div class="main-container">
-        <div class="my-courses" id="my-courses">
+        <div class="my-courses" id="my-courses" style="
+        margin: 100px 0px;
+    ">
           % if display_dashboard_courses:
           <%include file="learner_dashboard/_dashboard_navigation_courses.html"/>
           % endif

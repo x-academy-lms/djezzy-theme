@@ -10,17 +10,22 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
-      <header>
-        <img src="${static.url('images/djezzy-landscape.svg')}" alt="Djezzy acadedmy"/>
-        <div class="outer-wrapper">
-          
+      <div class="container-djezzy">
+        <header>
+          <img src="${static.url('images/djezzy-cover.png')}" alt="Djezzy academy"/>
+        </header>
 
-          <%include file="index_promo_video.html" />
+        <div class="overlay-cover">
+          <h1>DJEZZY ACADEMY</h1>
+          <div class="hero-text">
+          <h4> Élevez vos compétences : Adoptez l'Excellence de l'Apprentissage avec la Djezzy Academy dès aujourd'hui !</h4>
+          <div>
         </div>
-
-      </header>
-      <%include file="${courses_list}" />
-
+        <div class=".justify-content-left">
+        <%include file="${courses_list}" />
+        </div>
+  
+      </div>
     </section>
 </main>
 
