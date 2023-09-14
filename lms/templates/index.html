@@ -11,20 +11,34 @@ from openedx.core.djangolib.markup import HTML, Text
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
       <div class="container-djezzy">
-        <header>
-          <img src="${static.url('images/djezzy-cover.png')}" alt="Djezzy academy"/>
-        </header>
+        <div class="triangles">
+          <img src="${static.url('images/Djezzy-academy-Vector.svg')}" alt="Djezzy academy"/>
+        </div>
 
         <div class="overlay-cover">
-          <h1>DJEZZY ACADEMY</h1>
-          <div class="hero-text">
-          <h4> Élevez vos compétences : Adoptez l'Excellence de l'Apprentissage avec la Djezzy Academy dès aujourd'hui !</h4>
-          <div>
+          
+          <div class="djezzy-text" >
+            <h1>DJEZZY ACADEMY</h1>
+            <div class="hero-text">
+              <h4> Élevez vos compétences : Adoptez l'Excellence de l'Apprentissage avec la Djezzy Academy dès aujourd'hui !</h4>
+            </div>
+            <div class="explore-course-btn .justify-content-left">
+              <section class="expore-courses-content">
+      
+                <div class="d-flex flex-row justify-content-left">
+                      <a style="width:fit-content;" class="explore-courses" href="${settings.AUTHN_MICROFRONTEND_URL}/login" aria-current="false">
+                         Explorer les cours
+                      </a>
+                  </div>
+                  
+            </section>
+            </div>
+          </div>
+          <div class="cover">
+            <img src="${static.url('images/Djezzy-academy-background.png')}" alt="Djezzy academy"/>
+          </div>
         </div>
-        <div class=".justify-content-left">
-        <%include file="${courses_list}" />
-        </div>
-  
+        
       </div>
     </section>
 </main>
