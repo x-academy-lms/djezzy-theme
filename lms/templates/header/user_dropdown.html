@@ -31,8 +31,8 @@ should_show_order_history = should_redirect_to_order_history_microfrontend() and
 <div class="nav-item hidden-mobile">
     <a href="${reverse('dashboard')}" class="menu-title">
         <img data-hj-suppress class="user-image-frame" src="${profile_image_url}" alt="">
-        <span class="sr-only">${_("Dashboard for:")}</span>
-        <span data-hj-suppress class="username">${displayname}</span>
+        <!-- <span class="sr-only">${_("Dashboard for:")}</span> -->
+        <!-- <span data-hj-suppress class="username">${displayname}</span> -->
     </a>
 </div>
 <div class="nav-item hidden-mobile nav-item-dropdown" tabindex="-1">
@@ -40,6 +40,9 @@ should_show_order_history = should_redirect_to_order_history_microfrontend() and
         <span class="fa fa-caret-down" aria-hidden="true"></span>
     </div>
     <div class="dropdown-user-menu hidden" aria-label=${_("More Options")} role="menu" id="user-menu" tabindex="-1">
+        % if staff_access:
+            <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${settings.ADMIN_MICROFRONTEND_URL}" role="menuitem">Portail d'administration</a></div>
+        % endif
         % if resume_block:
             <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${resume_block}" role="menuitem">${_("Resume your last course")}</a></div>
         % endif
@@ -51,6 +54,7 @@ should_show_order_history = should_redirect_to_order_history_microfrontend() and
 
         <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('learner_profile', kwargs={'username': username})}" role="menuitem">${_("Profile")}</a></div>
         <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('account_settings')}" role="menuitem">${_("Account")}</a></div>
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${settings.GAMIFICATION_MICROFRONTEND_URL}" role="menuitem">Mes accomplissements</a></div>
         % if should_show_order_history:
             <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${settings.ORDER_HISTORY_MICROFRONTEND_URL}" role="menuitem">${_("Order History")}</a></div>
         % endif
