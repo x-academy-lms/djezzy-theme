@@ -39,11 +39,11 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
         % endif
         % if should_redirect_to_authn_mfe:
           <div class="mobile-nav-item hidden-mobile nav-item">
-              <a class="sign-in-btn btn" href="${settings.AUTHN_MICROFRONTEND_URL}/login${login_query()}">${_("Sign in")}</a>
+              <a class="sign-in-btn btn" href="${settings.AUTHN_MICROFRONTEND_URL}/login">${_("Sign in")}</a>
           </div>
         % else:
           <div class="mobile-nav-item hidden-mobile nav-item">
-              <a class="sign-in-btn btn" href="/login${login_query()}">${_("Sign")}</a>
+              <a class="sign-in-btn btn" href="${settings.AUTHN_MICROFRONTEND_URL}/login">${_("Sign")}</a>
           </div>
         % endif
       % endif
